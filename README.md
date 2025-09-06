@@ -1,5 +1,6 @@
 # GOST2-128-CBC
-File encryption with GOST2-128 in CBC mode
+
+# File encryption with GOST2-128 in CBC mode (C language)
 
   GOST2-128 File Encryptor/Decryptor (CBC + SHA-256 authentication)
    
