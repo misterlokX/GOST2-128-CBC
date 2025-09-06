@@ -10,8 +10,8 @@ File encryption with GOST2-128 in CBC mode
     Windows (MinGW): gcc gost2-128-cbc.c -o gost2file -lbcrypt
  
  * Usage:
-    #gost2file c <input_file>   -> produces <input_file>.gost2
-    #gost2file d <input_file>   -> removes .gost2 suffix if present, else appends .dec
+ *   gost2file c <input_file>   -> produces <input_file>.gost2
+ *   gost2file d <input_file>   -> removes .gost2 suffix if present, else appends .dec
  
  * File format (encrypted):
     [16 bytes IV (clear)] [ciphertext (PKCS#7 padded)] [32 bytes SHA-256 over ciphertext only]
