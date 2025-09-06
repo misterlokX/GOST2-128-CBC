@@ -6,8 +6,8 @@ File encryption with GOST2-128 in CBC mode
    Single-file utility: includes GOST2-128, SHA-256, CBC, IV generation, and I/O.
  
  * Build:
-    Unix/macOS: gcc gost2-128-cbc.c -o gost2file
-    Windows (MinGW): gcc gost2-128-cbc.c -o gost2file -lbcrypt
+ *  Unix/macOS: gcc gost2-128-cbc.c -o gost2file
+ *  Windows (MinGW): gcc gost2-128-cbc.c -o gost2file -lbcrypt
  
  * Usage:
  *   gost2file c <input_file>   -> produces <input_file>.gost2
