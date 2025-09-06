@@ -2,23 +2,23 @@
 File encryption with GOST2-128 in CBC mode
 
  * GOST2-128 File Encryptor/Decryptor (CBC + SHA-256 authentication)
- * 
+   
  * Single-file utility: includes GOST2-128, SHA-256, CBC, IV generation, and I/O.
- *
+ 
  * Build:
  *   Unix/macOS: gcc gost2file.c -o gost2file -Wall
  *   Windows (MinGW): gcc gost2file.c -o gost2file -lbcrypt -Wall
- *
+ 
  * Usage:
  *   gost2file c <input_file>   -> produces <input_file>.gost2
  *   gost2file d <input_file>   -> removes .gost2 suffix if present, else appends .dec
- *
+ 
  * File format (encrypted):
  *   [16 bytes IV (clear)] [ciphertext (PKCS#7 padded)] [32 bytes SHA-256 over ciphertext only]
- *
+ 
  * Password:
  *   Asked interactively (not via CLI). Not echoed on screen.
- *
+ 
  * Randomness:
  *   - Preferred: arc4random_buf (BSD/macOS)
  *   - Else: /dev/urandom (Unix)
